@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: Roboto, sans-serif;
+    color: rgb(255, 94, 0);
+    background-color: black;
+    text-decoration: none;
+    display: flex;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid rgb(255, 94, 0);
+    margin-bottom: 56px;
+    background-color: black;
+}
+.container form{
+border-color:rgb(255, 94, 0) ;
+
+}
+
+
+.submenu {
+    display: none;
+    border: 1px solid red;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    max-width: 300px;
+    width: 100%;
+    width: 300px;
+    top: 100%;
+}
+
+.menu >li {
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.clear{
+    clear: both;
+}
+
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:hover {
+    border-color: red ;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 100%
+}
+
+.produto img {
+    max-width: 100%;
+}
+
+.destaque {
+    margin-bottom: 56px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.destaque .produto a {
+    display: flex;
+    font-size: 2em;
+}
+
+.destaque .produto img {
+    margin-right: 8px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+
+.produtos { 
+    display: grid;
+    grid-template-columns: repeat(4, 23.5%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.botao-menu {
+    align-items: center;
+}
+
+
+@media screen and (max-widith:640px) {
+    
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+    
+    .destaque {
+        margin-bottom: 56px;
+    }
+    
+    .destaque .produto a {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    .destaque .produto img {
+        margin-right: 0;
+    }
+
+    .produtos { 
+        display: block;
+    }
+
+    .produtos .produto {
+        margin-bottom: 32px;
+    }
+    
+    header div.container {
+    flex-direction: column;
+}
+
+.submenu {
+    display: block;
+    width: 100%;
+    position: relative;
+    border: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu >li {
+    clear: both;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+
+}
+
+@media screen and (min-widith: 641px) and (max-widith: 1023px) {
+    .container {
+        max-widith: 90%
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .destaque .produto a {
+        font-size: 1.5em;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+    @media screen and (min-widith: 1024px) {
+        .botao-menu {
+            display: none;
+        }
+}

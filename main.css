@@ -6,7 +6,6 @@
     color: rgb(255, 94, 0);
     background-color: black;
     text-decoration: none;
-    display: flex;
 }
 
 .container {
@@ -18,7 +17,7 @@
 header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
 }
 
 header {
@@ -72,8 +71,7 @@ border-color:rgb(255, 94, 0) ;
 }
 
 .conteudo {
-    display: grid;
-    grid-template-columns: 100%
+    display: flex;
 }
 
 .produto img {
@@ -143,9 +141,14 @@ section h2 {
         margin-bottom: 32px;
     }
     
+    aside {
+        padding-left: 0;;
+    }
+
+
     header div.container {
-    flex-direction: column;
-}
+        flex-direction: column;
+    }
 
 .submenu {
     display: block;
@@ -186,10 +189,4 @@ section h2 {
     .produtos {
         grid-template-columns: repeat(2, 49%);
     }
-}
-
-    @media screen and (min-widith: 1024px) {
-        .botao-menu {
-            display: none;
-        }
 }
